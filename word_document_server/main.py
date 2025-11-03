@@ -37,9 +37,9 @@ def get_transport_config():
     config = {
         'transport': 'stdio',  # Default to stdio for backward compatibility
         'host': '0.0.0.0',
-        'port': 8000,
+        'port': 8080,
         'path': '/mcp',
-        'sse_path': '/sse'
+        'sse_path': '/md2doc'
     }
     
     # Override with environment variables if provided

@@ -51,7 +51,7 @@ def get_transport_choice():
     
     if choice == "2":
         host = input("Host (default: 127.0.0.1): ").strip() or "127.0.0.1"
-        port = input("Port (default: 8000): ").strip() or "8000"
+        port = input("Port (default: 8080): ").strip() or "8080"
         path = input("Path (default: /mcp): ").strip() or "/mcp"
         
         return {
@@ -62,8 +62,8 @@ def get_transport_choice():
         }
     elif choice == "3":
         host = input("Host (default: 127.0.0.1): ").strip() or "127.0.0.1"
-        port = input("Port (default: 8000): ").strip() or "8000"
-        sse_path = input("SSE Path (default: /sse): ").strip() or "/sse"
+        port = input("Port (default: 8080): ").strip() or "8080"
+        sse_path = input("SSE Path (default: /md2doc): ").strip() or "/md2doc"
         
         return {
             "transport": "sse",
@@ -413,13 +413,13 @@ MCP_TRANSPORT=stdio
 
 # HTTP/SSE Configuration (when not using stdio)
 MCP_HOST=127.0.0.1
-MCP_PORT=8000
+MCP_PORT=8080
 
 # Streamable HTTP specific
 MCP_PATH=/mcp
 
 # SSE specific  
-MCP_SSE_PATH=/sse
+MCP_SSE_PATH=/md2doc
 
 """)
         print(f"Created .env.example at: {env_example_path}")
