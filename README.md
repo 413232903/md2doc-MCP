@@ -150,6 +150,21 @@ Alternatively, you can use the provided setup script which handles:
 python setup_mcp.py
 ```
 
+### Quick Local Run
+
+Run the server directly after installing dependencies:
+
+```bash
+uv run word_mcp_server
+```
+
+If you do not set any environment variables, the server now starts with SSE transport automatically and is reachable at `http://localhost:8080/md2doc`. Think of it as plugging in a speaker that immediately plays through the loudspeaker instead of the headphone jack.
+
+## 开发总结
+
+- **2025-11-06**：默认启用 SSE 传输，开箱即可通过浏览器访问 `http://localhost:8080/md2doc`。
+- **反思**：之前默认使用 STDIO，好比把音乐默认接到耳机孔，用户没听到声音；后续改动要优先体验首次上手场景。
+
 ## Usage with Claude for Desktop
 
 ### Configuration
@@ -216,6 +231,12 @@ Once configured, you can ask Claude to perform operations like:
 - "Create a callout table with a blue checkmark icon and white text"
 - "Set the first column width to 50 points and auto-fit the remaining columns"
 - "Apply alternating row colors to make the table more readable"
+
+
+## 开发总结
+
+- **2025-11-06**：默认启用 SSE 传输，开箱即可通过浏览器访问 `http://localhost:8080/md2doc`。
+- **反思**：之前默认使用 STDIO，像是把音乐默认接到耳机孔，用户不知道要切换；后续改动时要多站在首次使用者角度验证默认体验。
 
 
 ## API Reference
